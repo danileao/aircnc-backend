@@ -20,7 +20,7 @@ const SpotSchema = new mongoose.Schema(
 
 SpotSchema.virtual("thumbnail_url").get(function() {
   // return `http://192.168.0.29:3333/files/${this.thumbnail}`;
-  return `https://d3m-aircnc-backend.herokuapp.com:3333/files/${this.thumbnail}`;
+  return `https://d3m-aircnc-backend.herokuapp.com/files/${this.thumbnail}`;
 });
 
 module.exports = mongoose.model("Spot", SpotSchema);
